@@ -1,0 +1,53 @@
+{
+    "config" : {
+        "thread_pool_capacity": 5,
+        "stateFile": "./scheduler_state.json",
+        "tasks": [
+        {
+            "name": "Dummy System Task",
+            "type": "system",
+            "period": 30000,
+            "params": {}
+        },
+        {
+            "name": "Connect to Google",
+            "type": "network:connect",
+            "period": 20000,
+            "params": {
+                "domain": "google.com",
+                "port": "80"
+            }
+        },
+        {
+            "name": "Connect to NASA",
+            "type": "network:connect",
+            "period": 40000,
+            "params": {
+                "domain": "nasa.gov",
+                "port": "80"
+            }
+        },
+        {
+            "name": "Connect to boostcpplibraries",
+            "type": "network:connect",
+            "period": 10000,
+            "params": {
+                "domain": "theboostcpplibraries.com",
+                "port": "80"
+            }
+        },
+        {
+            "name": "Connect to BBC",
+            "type": "network:connect",
+            "period": 50000,
+            "params": {
+                "domain": "bbc.co.uk",
+                "port": "80"
+            }
+        }
+        
+    ]
+    }
+    
+}
+
